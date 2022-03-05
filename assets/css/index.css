@@ -1,0 +1,833 @@
+
+/* ===================================== Variable =================================== */
+:root {
+    --main-bg: #ffffff;
+    --second-bg: #f7f7f7;
+    --second-bg-hover: #E8E8E8;
+    --main-color: #0093FF;
+    --second-color: #62b4ff;
+    --main-color-hover: #0076CC;
+    --text-white: #fff;
+    --text-black: #000;
+    --text-orange: #d68102;
+    --border-radius: 5px; 
+}
+
+/* ========================================= Global Style ============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* ========================================= main style ================================ */
+
+body, input, textarea, button, select, a {
+    font-size: 16px;
+    font-family: "Avenir Next", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--text-black);
+    line-height: 1.5;
+}
+
+
+/* ===================================== Header style   ================================= */
+
+header {
+    width: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        var(--main-color),
+        var(--second-color)
+    );
+    color: var(--text-white);
+}
+
+.message {
+    text-align: center;
+    background-color: var(--text-black);
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+
+.message > a {
+    color: var(--text-white);
+}
+
+nav {
+    height: 100px;
+    padding: 10px 50px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: block;
+    max-width: 200px;
+}
+
+.nav-left > a {
+    text-decoration: none;
+}
+
+.nav-left > a > img {
+    width: 100%;
+}
+
+.nav-center {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-center__lists {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-center__lists > a  {
+    display: block;
+    white-space: nowrap;
+    color: var(--text-white);
+    text-decoration: none;
+    padding: 3px 10px;
+}
+.nav-center__lists > a:hover {
+    color: var(--text-black);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+.nav-right > select {
+    background-color: transparent;
+    color: var(--text-white);
+    margin-right: 15px;
+}
+
+.nav-right > select > option {
+    background-color: transparent;
+    color: var(--text-black);
+}
+
+.nav-right > button {
+    background-color: transparent;
+    color: var(--text-white);
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.search {
+    position: relative;
+    border: 1px solid;
+    padding: 5px 15px 1px 15px;
+    border-radius: 15px;
+    border-color: var(--text-black);
+    margin-right: 15px;
+    color: var(--text-white);
+    display: none;
+}
+
+.search > input {
+    background-color: transparent;
+    height: 100%;
+    color: var(--text-white);
+}
+
+.search > button {
+    background-color: transparent;
+    color: var(--text-white);
+    cursor: pointer;
+    display: block;
+}
+
+.btn_toggle {
+    display: none;
+}
+
+.nav-right > button > i {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 0;
+}
+
+.hero > h2 {
+    font-size: 4.0625em;
+    text-shadow: 0 0 4px rgb(0 0 0 / 40%);
+    margin-bottom: 8px;
+    font-weight: 100;
+}
+.hero > p {
+    font-size: 1.5em;
+    text-align: center;
+    width: 60%;
+}
+
+.hero > a {
+    appearance: none;
+    display: inline-block;
+    width: auto;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    padding: 8px 15px;
+    margin-top: 15px;
+    background-color: var(--main-color);
+    color: var(--text-white);
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: normal;
+    font-size: 14px;
+}
+
+.hero > a:hover {
+    background-color: var(--main-color-hover);
+}
+
+/* ========================================= Article ================================== */
+.article {
+    padding: 30px 100px;
+    display: block;
+    background-color: var(--main-bg);
+}
+.article > h2 {
+    text-align: center;
+    font-weight: 100;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.article-items {
+    display: grid;
+    grid-template-columns: repeat(5, .5fr);
+    gap: 1.5rem;
+}
+.article-items__store {
+    display: grid;
+    grid-template-columns: repeat(3, .5fr);
+    gap: 1.5rem;
+}
+.article-lists {
+    background-color: var(--second-bg);
+    border-radius: var(--border-radius);
+    
+}
+
+.article-lists > a > img {
+    width: 100%;
+    height: initial;
+}
+
+.article-lists > a {
+    color: var(--text-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.article-lists > a > h4:hover {
+    text-decoration: underline;
+}
+
+.article-lists__span:hover {
+    text-decoration: none;
+}
+
+.article-lists__span > i{
+    color: var(--text-orange);
+    font-size: 0.75rem;
+}
+
+/* ================================= Step Style ======================================== */
+.step {
+    padding: 30px 100px;
+    display: block;
+    background-color: var(--main-bg);
+}
+
+.step > h2 {
+    text-align: center;
+    font-weight: 100;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.step-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.step-lists {
+    text-align: center;
+}
+.step-lists > img {
+    width: 100%;
+    height: initial;
+}
+
+
+/* =============================== SlideShow ========================================== */
+
+.show-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 75vh;
+}
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 100%;
+    animation: animate 20s linear infinite;
+}
+.slide {
+    position: relative;
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+.slide1 {
+    background: url("../images/review/14.jpg");
+    background-size: cover;
+    background-position: center;
+    background-size: 100%;
+}
+
+.slide2 {
+    background: url("../images/review/15.jpg");
+    background-size: cover;
+    background-position: center;
+    background-size: 100%;
+}
+
+.slide3 {
+    background: url("../images/review/16.jpg");
+    background-size: cover;
+    background-position: center;
+    background-size: 100%;
+}
+
+.slide4 {
+    background: url("../images/review/17.jpg");
+    background-size: cover;
+    background-position: center;
+    background-size: 100%;
+}
+
+@keyframes animate {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+
+/* ====================================== confidence ===================================== */
+.confidence {
+    padding: 30px 100px;
+}
+
+.confidence > h2 {
+    text-align: center;
+    font-weight: 100;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.confidence-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+    margin: 15px 100px;
+}
+.confidence-lists {
+    max-width: 160px;
+}
+.confidence-lists > a > img {
+    width: 100%;
+    height: initial;
+}
+
+/* ================================== Article Reviews ================================== */
+.article-reviews {
+    padding: 30px 150px;
+}
+.article-reviews__head {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.article-reviews__head > button {
+    font-size: 1.5rem;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid #E8E8E8;
+    border-radius: 4px;
+    height: 40px !important;
+    cursor: pointer;
+    background-color: var(--main-bg);
+}
+
+.article-reviews__head > button:hover {
+    background-color: var(--second-bg);
+}
+.article-reviews__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    text-align: left;
+    align-items: center;
+}
+.article-star__span > i {
+    color: var(--text-orange);
+}
+
+.article-reviews__lists {
+    background-color: var(--second-bg);
+}
+
+.article-reviews__lists:hover {
+    background-color: var(--second-bg-hover);
+}
+
+.article-reviews__lists > img {
+    display: block;
+    width: 100%;
+    cursor: zoom-in;
+}
+.article-reviews__lists-block {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    cursor: pointer;
+}
+.date {
+    font-size: .7rem; 
+}
+.block-article {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.btn-show__all {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-show__all > a {
+    padding: 10px 30px;
+    border: 1px solid #E8E8E8;
+    border-radius: 4px;
+    height: 40px !important;
+    cursor: pointer;
+    background-color: var(--main-bg);
+    color: var(--text-black);
+}
+.btn-show__all > a:hover {
+    background-color: var(--second-bg);
+}
+
+.btn-logo {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.btn-logo > a > img {
+    width: 200px;
+    height: initial;
+}
+
+/* ======================================= Footer ======================================= */
+footer {
+    background-color: var(--second-bg);
+    padding: 60px 100px;
+}
+.footer-head {
+    color: var(--text-black);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+.col-3 {
+    min-width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+.col-3 > div {
+    display: flex;
+    flex-direction: column;
+
+}
+.col-6 {
+    min-width: 100%;
+}
+.col-6 > h2 {
+    text-align: center;
+    font-weight: 100;
+    margin-bottom: 50px;
+}
+
+.fotter-sub {
+    display: flex;
+    align-content: center;
+    padding-top: 15px;
+
+}
+
+.fotter-sub > input {
+    padding: 10px 15px;
+    display: inline-block;
+    width: 100%;
+    border: 1px solid;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.fotter-sub > button {
+    appearance: none;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 8px 15px;
+    background-color: var(--main-color);
+    color: var(--text-white);
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: normal;
+    font-size: 14px;
+}
+
+.fotter-sub > button:hover {
+    background-color: var(--main-color-hover);
+}
+
+.footer-icone {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 50px;
+}
+
+.footer-social {
+    display: block;
+}
+
+.footer-social > a{
+    font-size: 1.6rem;
+}
+
+.footer-payoff {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+.footer-payoff > img {
+    width: 1.5rem;
+    height: 1.4rem;
+}
+
+footer > p {
+    text-align: center;
+    font-weight: 100;
+    margin-top: 50px;
+}
+
+/* ========================================= About ================================== */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    padding: 30px 150px;
+}
+
+.about > h2 {
+    text-align: center;
+    font-weight: 100;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.about > img {
+    max-width: 100%;
+    border: 0;
+    height: auto;
+}
+.about-explain {
+    margin: 20px 0px;
+}
+
+.about-explain > h2 {
+    font-weight: 100;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-explain > p {
+    margin-bottom: 15px;
+}
+
+/* ========================================= Contact ================================== */
+.contact {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 150px;
+}
+
+.contact > h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.contact-content {
+    margin: 20px 0px;
+}
+
+.contact-content > h2 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.contact-content > p {
+    margin-bottom: 15px;
+}
+
+.contact-content > form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 20px;
+}
+
+.form-row > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row > div > input {
+    border: 1px solid;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-column > input {
+    border: 1px solid;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+}
+
+.form-column > textarea {
+    border: 1px solid;
+    border-radius: var(--border-radius);
+    padding: 10px 20px; 
+}
+
+.contact-content > form > button {
+    appearance: none;
+    display: inline-block;
+    width: 120px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    padding: 8px 15px;
+    margin-top: 15px;
+    background-color: var(--main-color);
+    color: var(--text-white);
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: normal;
+    font-size: 14px;
+
+}
+
+.contact-content > form > button:hover {
+    background-color: var(--main-color-hover);
+
+}
+
+
+/* ========================================= Galery ================================== */
+.galery {
+    padding: 30px 150px;
+}
+.galery > h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* ========================================= Responsive header ================================== */
+@media only screen and (max-width: 868px) {
+
+    /* *********************** Nav ********************** */
+    nav {
+        padding: 10px 30px;
+        position: relative;
+
+    }
+    .nav-center {
+        display: none;
+    }
+
+    .toggle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        min-width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin-top: 100px;
+        background-color: #189BFF;
+        padding: 20px;
+    }
+    
+    .btn_toggle {
+        display: flex;
+
+    }
+
+    .hero > h2 {
+        font-size: 2.0625em;
+    }
+
+    .hero > p {
+        font-size: 1em;
+    }
+
+    /* ********************** Articles ************************ */
+    .article-items {
+        grid-template-columns: repeat(2, .5fr);
+    }
+
+    .article-items__store {
+        grid-template-columns: repeat(2, .5fr);
+    }
+
+    /* ************************** Step *************************** */
+    .step {
+        padding: 30px 50px;
+    }
+
+    /* ========================== confidence =================== */
+    .confidence {
+        padding: 30px 30px;
+    }
+    .confidence-items {
+        margin: 15px 5px;
+    }
+
+    /* ************************ Article Review ****************** */
+    .article-reviews {
+        padding: 30px 30px;
+    }
+    .article-reviews__items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* *********************** footer ****************************** */
+    footer {
+        padding: 30px 50px;
+    }
+    .footer-head {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .col-3 {
+        min-width: 100%;
+    }
+    .col-3 > div {
+        margin-right: 10px;
+    }
+    .col-6 {
+        min-width: 100%;
+        margin-top: 10px;
+    }
+
+    /* *********************** footer ****************************** */
+    .about {
+        padding: 30px 50px;
+    }
+    /* *********************** Contact ****************************** */
+    .contact {
+        padding: 30px 50px;
+    }
+    .form-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
